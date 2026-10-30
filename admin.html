@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vista demo del panel de productos de Saúl Guitars.">
+  <meta property="og:title" content="Panel demo | Saúl Guitars">
+  <title>Panel demo — Saúl Guitars</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+  <script defer src="products.js"></script>
+  <script defer src="admin.js"></script>
+</head>
+<body class="admin-body">
+  <aside class="admin-sidebar">
+    <a href="index.html" class="admin-brand"><img src="assets/logo-dorado.png" alt="Saúl Guitars"></a>
+    <span class="admin-sidebar-label">PANEL DE CATÁLOGO</span>
+    <nav aria-label="Navegación del panel">
+      <a href="#resumen" class="admin-nav active"><i class="fa-solid fa-chart-simple"></i> Resumen</a>
+      <a href="#productos" class="admin-nav"><i class="fa-solid fa-guitar"></i> Productos</a>
+      <a href="#formulario" class="admin-nav"><i class="fa-solid fa-plus"></i> Nuevo producto</a>
+      <a href="index.html" class="admin-nav"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver catálogo</a>
+    </nav>
+    <div class="admin-sidebar-footer">VISTA DE DEMOSTRACIÓN<br>Saúl Guitars · Buenos Aires</div>
+  </aside>
+  <main class="admin-main">
+    <header class="admin-topbar"><div><span class="eyebrow">SAÚL GUITARS</span><h1>Panel de productos</h1></div><a href="index.html" class="admin-view-link">Ver sitio <i class="fa-solid fa-arrow-up-right-from-square"></i></a></header>
+    <div class="demo-notice"><i class="fa-solid fa-circle-info"></i><p>Esta es una maqueta interactiva. Los cambios se guardan únicamente en este navegador. No hay acceso privado ni base de datos conectada.</p></div>
+    <section class="admin-stats" id="resumen" aria-label="Resumen del catálogo"><div><span>PRODUCTOS EN DEMO</span><strong id="totalProducts">0</strong><i class="fa-solid fa-guitar"></i></div><div><span>GUITARRAS</span><strong id="guitarProducts">0</strong><i class="fa-solid fa-music"></i></div><div><span>CATEGORÍAS CON PRODUCTOS</span><strong id="categoryCount">0</strong><i class="fa-solid fa-layer-group"></i></div></section>
+    <section class="admin-panel" id="productos"><div class="admin-panel-heading"><div><span class="eyebrow">GESTIÓN DE STOCK</span><h2>Productos</h2></div><a href="#formulario" id="newProductButton" class="button button-gold"><i class="fa-solid fa-plus"></i> Agregar producto</a></div><div class="admin-list-filter"><label><i class="fa-solid fa-magnifying-glass"></i><span class="sr-only">Buscar en el panel</span><input id="adminSearch" type="search" placeholder="Buscar por modelo, marca o código"></label><select id="adminCategory"><option value="all">Todas las categorías</option></select></div><div class="table-scroll"><table><thead><tr><th>PRODUCTO</th><th>CATEGORÍA</th><th>AÑO</th><th>ESTADO</th><th>ACCIONES</th></tr></thead><tbody id="adminRows"></tbody></table></div></section>
+    <section class="admin-panel form-panel" id="formulario"><div class="admin-panel-heading"><div><span class="eyebrow">FICHA DE PRODUCTO</span><h2 id="formTitle">Agregar producto</h2></div><button type="button" class="form-reset" id="resetForm">Limpiar formulario <i class="fa-solid fa-rotate-left"></i></button></div><form id="productForm"><input id="editingId" type="hidden"><div class="form-grid"><label>Código de stock <input id="productId" type="text" placeholder="Ej. SG-028" required maxlength="30"></label><label>Marca <input id="productBrand" type="text" placeholder="Ej. Fender" required maxlength="60"></label><label class="wide-field">Modelo <input id="productModel" type="text" placeholder="Ej. Stratocaster Vintage" required maxlength="120"></label><label>Categoría <select id="productCategory" required></select></label><label>Año <input id="productYear" type="text" inputmode="numeric" placeholder="Ej. 1978" maxlength="4"></label><label>Color / acabado <input id="productColor" type="text" placeholder="Ej. Sunburst" maxlength="80"></label><label>Fotografía <input id="productImage" type="file" accept="image/*"><small>Opcional · imagen de hasta 1 MB para esta demo.</small></label></div><div class="image-preview" id="imagePreview"><i class="fa-regular fa-image"></i><span>Vista previa de la fotografía</span></div><div class="form-actions"><button type="submit" class="button button-gold"><i class="fa-solid fa-floppy-disk"></i> Guardar producto</button><span id="formMessage" role="status"></span></div></form></section>
+    <footer class="admin-footer">Vista demo de Saúl Guitars · Hecho por <a href="https://zigodev.com.ar" target="_blank" rel="noopener noreferrer">zigodev</a></footer>
+  </main>
+</body>
+</html>

@@ -58,6 +58,8 @@ function editProduct(id) {
   document.querySelector('#productCategory').value = item.category;
   document.querySelector('#productYear').value = item.year;
   document.querySelector('#productColor').value = item.color;
+  document.querySelector('#productDescription').value = item.description || '';
+  document.querySelector('#productSpecs').value = Array.isArray(item.specs) ? item.specs.join('\n') : '';
   document.querySelector('#formTitle').textContent = 'Editar producto';
   currentImage = item.image;
   showPreview(currentImage);
@@ -95,7 +97,9 @@ form.addEventListener('submit', event => {
     category: document.querySelector('#productCategory').value,
     year: document.querySelector('#productYear').value.trim(),
     color: document.querySelector('#productColor').value.trim(),
-    image: pendingImage || currentImage
+    image: pendingImage || currentImage,
+    description: document.querySelector('#productDescription').value.trim(),
+    specs: document.querySelector('#productSpecs').value.split('\n').map(value => value.trim()).filter(Boolean)
   };
   const next = editingId ? list.map(product => product.id === editingId ? item : product) : [item, ...list];
   if (saveProducts(next)) { resetForm(); render(); setMessage('Producto guardado en este navegador. Abrí el catálogo para verlo.'); }

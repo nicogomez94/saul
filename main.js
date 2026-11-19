@@ -36,7 +36,7 @@ function renderProducts() {
   const products = getSaulProducts().filter(product => {
     const matchesCategory = activeCategory === 'all' || product.category === activeCategory;
     const matchesBrand = !brandFilter.value || product.brand === brandFilter.value;
-    const matchesSearch = `${product.brand} ${product.model} ${product.year} ${product.id}`.toLocaleLowerCase('es').includes(query);
+    const matchesSearch = `${product.brand} ${product.model} ${product.year} ${product.id} ${product.description || ''}`.toLocaleLowerCase('es').includes(query);
     return matchesCategory && matchesBrand && matchesSearch;
   });
   resultCount.textContent = `${products.length} ${products.length === 1 ? 'PIEZA' : 'PIEZAS'} EN ESTA SELECCIÓN`;
@@ -44,10 +44,26 @@ function renderProducts() {
     const title = `${product.brand} ${product.model}`;
     const image = product.image ? `<img src="${escapeHtml(product.image)}" alt="${escapeHtml(title)}" loading="lazy">` : '<div class="product-placeholder"><i class="fa-solid fa-guitar"></i><span>FOTOGRAFÍA PRÓXIMAMENTE</span></div>';
     const message = encodeURIComponent(`Hola, quiero consultar por ${title} (${product.id}) de Saúl Guitars.`);
-    return `<article class="product-card fade-in visible"><div class="product-image">${image}<span class="product-tag">${escapeHtml(product.id)}</span><a class="quick-view" href="mailto:guitarssaul@gmail.com?subject=${encodeURIComponent('Consulta ' + product.id)}&body=${message}" aria-label="Consultar por ${escapeHtml(title)}"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div><div class="product-info"><div class="product-overline">${escapeHtml(SAUL_CATEGORIES.find(item => item[0] === product.category)?.[1] || product.category)} ${product.year ? '· ' + escapeHtml(product.year) : ''}</div><h3>${escapeHtml(title)}</h3><div class="product-bottom"><span>${escapeHtml(product.color || 'Consultar detalles')}</span><a href="mailto:guitarssaul@gmail.com?subject=${encodeURIComponent('Consulta ' + product.id)}&body=${message}">Consultar <i class="fa-solid fa-arrow-right"></i></a></div></div></article>`;
+    return `<article class="product-card fade-in visible"><div class="product-image">${image}<span class="product-tag">${escapeHtml(product.id)}</span><button type="button" class="quick-view" data-detail="${escapeHtml(product.id)}" aria-label="Ver detalle de ${escapeHtml(title)}"><i class="fa-solid fa-arrow-up-right-from-square"></i></button></div><div class="product-info"><div class="product-overline">${escapeHtml(SAUL_CATEGORIES.find(item => item[0] === product.category)?.[1] || product.category)} ${product.year ? '· ' + escapeHtml(product.year) : ''}</div><h3>${escapeHtml(title)}</h3><button type="button" class="detail-link" data-detail="${escapeHtml(product.id)}">Ver detalles <i class="fa-solid fa-arrow-right"></i></button><div class="product-bottom"><span>${escapeHtml(product.color || 'Consultar detalles')}</span><a href="mailto:guitarssaul@gmail.com?subject=${encodeURIComponent('Consulta ' + product.id)}&body=${message}">Consultar <i class="fa-solid fa-arrow-right"></i></a></div></div></article>`;
   }).join('');
   emptyState.hidden = products.length > 0;
 }
+const productDialog = document.querySelector('#productDialog');
+const dialogContent = document.querySelector('#dialogContent');
+grid.addEventListener('click', event => {
+  const trigger = event.target.closest('[data-detail]');
+  if (!trigger) return;
+  const product = getSaulProducts().find(item => item.id === trigger.dataset.detail);
+  if (!product) return;
+  const title = `${product.brand} ${product.model}`;
+  const image = product.image ? `<img src="${escapeHtml(product.image)}" alt="${escapeHtml(title)}">` : '<div class="product-placeholder"><i class="fa-solid fa-guitar"></i></div>';
+  const specs = Array.isArray(product.specs) ? product.specs : [];
+  const message = encodeURIComponent(`Hola, quiero consultar por ${title} (${product.id}) de Saúl Guitars.`);
+  dialogContent.innerHTML = `<div class="dialog-layout"><div class="dialog-photo">${image}</div><div class="dialog-copy"><span class="product-overline">${escapeHtml(product.id)} · ${escapeHtml(SAUL_CATEGORIES.find(item => item[0] === product.category)?.[1] || product.category)}${product.year ? ' · ' + escapeHtml(product.year) : ''}</span><h2 id="detailTitle">${escapeHtml(title)}</h2><span class="dialog-color">${escapeHtml(product.color || 'Detalles a consultar')}</span><p>${escapeHtml(product.description || 'Consultanos para conocer la historia y los detalles de esta pieza.')}</p>${specs.length ? `<div class="dialog-specs"><span>CARACTERÍSTICAS</span><ul>${specs.map(spec => `<li>${escapeHtml(spec)}</li>`).join('')}</ul></div>` : ''}<a class="button button-gold" href="mailto:guitarssaul@gmail.com?subject=${encodeURIComponent('Consulta ' + product.id)}&body=${message}">Consultar por esta pieza <i class="fa-solid fa-arrow-right"></i></a></div></div>`;
+  productDialog.showModal();
+});
+document.querySelector('#dialogClose').addEventListener('click', () => productDialog.close());
+productDialog.addEventListener('click', event => { if (event.target === productDialog) productDialog.close(); });
 initFilters();
 renderProducts();
 brandFilter.addEventListener('change', renderProducts);

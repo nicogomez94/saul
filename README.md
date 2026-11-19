@@ -39,6 +39,7 @@ Esta rama requiere **un Web Service de Node y una base PostgreSQL**, con el mism
 - Start command: `npm start`
 - Variables: `DATABASE_URL`, `ADMIN_EMAIL`, `ADMIN_PASSWORD_HASH`, `SESSION_SECRET`, `NODE_ENV=production`; `WHATSAPP_NUMBER` es opcional porque también se administra desde el panel.
 - `STOCK_SERIALS_JSON` y `STOCK_FINANCIALS_JSON` permiten importar los datos privados de la hoja en la carga inicial. Se pueden omitir y completarlos desde el panel.
+- `DEBUG_MODE=true` junto con `DEBUG_ADMIN_EMAIL` y `DEBUG_ADMIN_PASSWORD` precarga las credenciales en el formulario de acceso. Usarlo solo durante la revisión y desactivarlo antes de una publicación definitiva.
 
 `npm run db:deploy` aplica migraciones y agrega solo los códigos de stock que todavía no existan; no sobrescribe cambios realizados desde el panel. Antes de publicar, revisar [la conciliación del stock](data/conciliacion-stock.md), completar el número de WhatsApp y confirmar la disponibilidad de las piezas.
 

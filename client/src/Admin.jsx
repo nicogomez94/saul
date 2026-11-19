@@ -70,6 +70,16 @@ export default function Admin() {
     setSubscribers(mailing);
   }
   useEffect(() => {
+    api("/config")
+      .then((config) => {
+        if (config.debugMode && config.debugAdmin) {
+          setLogin({
+            email: config.debugAdmin.email,
+            password: config.debugAdmin.password,
+          });
+        }
+      })
+      .catch(() => {});
     api("/auth/me")
       .then(async (session) => {
         setUser(session);
@@ -267,6 +277,9 @@ export default function Admin() {
           <span className="eyebrow">ADMINISTRACIÓN</span>
           <h1>Ingresá al panel.</h1>
           <p>Gestioná las piezas, fotos y datos del catálogo.</p>
+          {login.email && login.password && (
+            <span className="debug-login-note">Modo debug activo</span>
+          )}
           <label>
             Correo
             <input

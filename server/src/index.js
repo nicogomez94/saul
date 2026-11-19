@@ -21,6 +21,11 @@ const app = express();
 const port = Number(process.env.PORT || 3001);
 const secret = process.env.SESSION_SECRET || "";
 const adminEmail = (process.env.ADMIN_EMAIL || "").trim().toLowerCase();
+const debugMode = process.env.DEBUG_MODE === "true";
+const debugAdminEmail = (process.env.DEBUG_ADMIN_EMAIL || adminEmail)
+  .trim()
+  .toLowerCase();
+const debugAdminPassword = process.env.DEBUG_ADMIN_PASSWORD || "";
 const adminPasswordHash =
   process.env.ADMIN_PASSWORD_HASH ||
   (process.env.ADMIN_PASSWORD
@@ -179,6 +184,15 @@ app.get(
       whatsappNumber: setting?.value || process.env.WHATSAPP_NUMBER || "",
       email: "guitarssaul@gmail.com",
       instagram: "https://www.instagram.com/saulguitars/",
+      ...(debugMode && debugAdminPassword
+        ? {
+            debugMode: true,
+            debugAdmin: {
+              email: debugAdminEmail,
+              password: debugAdminPassword,
+            },
+          }
+        : {}),
     });
   }),
 );

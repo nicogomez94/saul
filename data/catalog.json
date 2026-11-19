@@ -1,0 +1,682 @@
+[
+  {
+    "stockId": "SG-001",
+    "brand": "Fender",
+    "model": "Stratocaster Ltd '61 Relic",
+    "year": "2020",
+    "color": "Sparkle Gold",
+    "category": "electricas",
+    "description": "Aged Chartreuse Sparkle · 2020\n\nUna Fender Custom Shop que toma como punto de partida una Stratocaster de 1961 y la lleva a un lugar bastante menos tradicional.\n\nEl Aged Chartreuse Sparkle es sin dudas protagonista: un finish muy particular que cambia con la luz y que, combinado con el trabajo Relic, logra una mezcla increíble entre una estética llamativa y una Strat hecha para tocar.\n\nCuerpo de alder, mango de roasted flame maple quartersawn y diapasón de rosewood AAA. Está equipada con un set de Hand-Wound Texas Special, con mucho cuerpo, ataque y ese carácter inconfundible de Stratocaster.\n\nUna Custom Shop con una combinación difícil de encontrar y todavía más difícil de pasar por alto.",
+    "specs": [
+      "Cuerpo de alder",
+      "Mango de roasted flame maple quartersawn",
+      "Diapasón de rosewood AAA",
+      "Radio 9.5”",
+      "21 trastes",
+      "Hand-Wound Texas Special Pickups",
+      "Finish Aged Chartreuse Sparkle",
+      "Relic",
+      "Fender Custom Shop · USA"
+    ],
+    "photos": [
+      "/assets/products/SG-001/1.jpg",
+      "/assets/products/SG-001/2.jpg",
+      "/assets/products/SG-001/3.jpg",
+      "/assets/products/SG-001/4.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1zLW1ulibDdRnTGY7dnD-IluP4XrVV_W7TdW-DSzraD8/edit"
+  },
+  {
+    "stockId": "SG-002",
+    "brand": "Fender",
+    "model": "Telecaster Deluxe",
+    "year": "1978",
+    "color": "Natural",
+    "category": "electricas",
+    "description": "1978 · USA\n\nUna Telecaster Deluxe de verdad, nacida en los años 70.\n\nPresentada por Fender a comienzos de esa década, la Deluxe llevó la Telecaster a un terreno completamente diferente: dos humbuckers Wide Range, cuatro controles, selector de tres posiciones y el característico headstock grande de Stratocaster.\n\nEsta unidad es de 1978 y llega hasta hoy con casi 50 años de historia encima. El desgaste, las marcas y el paso del tiempo son parte de una guitarra que pertenece realmente a esa época, no una recreación de ella.\n\nUna Fender setentosa, con historia real y toda la personalidad de uno de los diseños más particulares de la familia Telecaster.",
+    "specs": [
+      "Cuerpo Telecaster Deluxe",
+      "Mango y diapasón de maple",
+      "2 Wide Range Humbuckers",
+      "Selector de 3 posiciones",
+      "2 volúmenes / 2 tonos",
+      "Hardtail",
+      "Pickguard negro",
+      "Made in USA",
+      "Año 1978"
+    ],
+    "photos": [
+      "/assets/products/SG-002/1.jpg",
+      "/assets/products/SG-002/2.jpg",
+      "/assets/products/SG-002/3.jpg",
+      "/assets/products/SG-002/4.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1LWbdjK8YK_Cxy52u8k2-UFYYcErqmaeedKu3ZeUH_0A/edit"
+  },
+  {
+    "stockId": "SG-003",
+    "brand": "Fender",
+    "model": "Telecaster super heavy relic",
+    "year": "2024",
+    "color": "Blonde",
+    "category": "electricas",
+    "description": "Super Heavy Relic · Butterscotch\n\nUna interpretación de Fender Custom Shop de la Telecaster de 1953, en versión Limited Edition y con un trabajo Super Heavy Relic que lleva la estética de una vieja Blackguard al extremo.\n\nChecking, golpes, desgaste de la laca y grandes sectores donde el finish deja ver la madera. En esta guitarra el relic no es un detalle: es parte central de su personalidad.\n\nLa fórmula mantiene la esencia de una Tele de principios de los 50: estética Blackguard, mango de maple, dos single coils y puente vintage de tres saddles.\n\nSimple, directa y con esa personalidad que convirtió a la Telecaster en una de las guitarras fundamentales de la historia.\n\nUna ’53 hecha para que cada marca sume, no reste.",
+    "specs": [
+      "Limited Edition",
+      "Mango y diapasón de maple",
+      "2 Single Coil Telecaster",
+      "Puente vintage de 3 saddles",
+      "Blackguard",
+      "Finish Butterscotch",
+      "Super Heavy Relic",
+      "Fender Custom Shop · USA"
+    ],
+    "photos": [
+      "/assets/products/SG-003/1.jpg",
+      "/assets/products/SG-003/2.jpg",
+      "/assets/products/SG-003/3.jpg",
+      "/assets/products/SG-003/4.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/17eB2j7oOkXMCcoLPtB6wBNJi47jxfR1BBFxo8-yJ25w/edit"
+  },
+  {
+    "stockId": "SG-004",
+    "brand": "Fender",
+    "model": "Stratocaster Ltd '56 relic",
+    "year": "2019",
+    "color": "Sunburst",
+    "category": "electricas",
+    "description": "Año 2016\n\nUna Fender Custom Shop inspirada en una de las grandes épocas de la Stratocaster: 1956.\n\nParte de la Limited Collection, con cuerpo de ash, mango de maple y terminación Relic. Una combinación clásica, con el feel y la estética de una Strat de los 50.\n\nEquipada con pickups Custom Shop ’56, tiene ese carácter abierto, definido y dinámico que uno espera de una buena Stratocaster.",
+    "specs": [
+      "Cuerpo de ash",
+      "Mango y diapasón de maple",
+      "Perfil 10/56 “V”",
+      "Radio 9.5”",
+      "21 trastes",
+      "Pickups Custom Shop ’56 Strat",
+      "Terminación Relic",
+      "2-Tone Sunburst",
+      "Fender Custom Shop · USA"
+    ],
+    "photos": [
+      "/assets/products/SG-004/1.jpg",
+      "/assets/products/SG-004/2.jpg",
+      "/assets/products/SG-004/3.jpg",
+      "/assets/products/SG-004/4.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1iOljbjsk_ZHlHaR196yS_HQoAVsWFHMAh4ako7mDgcI/edit"
+  },
+  {
+    "stockId": "SG-005",
+    "brand": "Fender",
+    "model": "Telecaster Nocaster closet clasic  (custom Shop )",
+    "year": "2006",
+    "color": "Butterscotch",
+    "category": "electricas",
+    "description": "Una de las Telecaster más representativas del Fender Custom Shop, basada en la Nocaster de 1951 y perteneciente a la serie Time Machine.\n\nTerminación Closet Classic en nitro, cuerpo de Premium Ash y mango de maple con perfil “U”. Una guitarra con estética vintage y el desgaste sutil característico de este acabado.",
+    "specs": [
+      "Cuerpo de Premium Ash",
+      "Mango de maple perfil “U”",
+      "Diapasón de maple",
+      "Radio 7.25”",
+      "Escala 25.5”",
+      "21 trastes Vintage Style",
+      "2 Custom Nocaster Vintage Tele Single-Coil",
+      "Custom Vintage Wiring",
+      "Puente Vintage Style con 3 selletas de brass",
+      "Clavijas Fender/Gotoh Vintage Style",
+      "Pickguard negro 1-ply",
+      "Hardware Nickel/Chrome",
+      "Terminación nitrocelulosa",
+      "Finish Honey Blonde",
+      "Closet Classic",
+      "Fender Custom Shop · USA"
+    ],
+    "photos": [
+      "/assets/products/SG-005/1.jpg",
+      "/assets/products/SG-005/2.jpg",
+      "/assets/products/SG-005/3.jpg",
+      "/assets/products/SG-005/4.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/18PB2GKDA3ZapaocB9rpdRJvsIIkjTaQfv3WD90BvQmk/edit"
+  },
+  {
+    "stockId": "SG-006",
+    "brand": "Fender",
+    "model": "Telecaster Custom Ltd '53",
+    "year": "2020",
+    "color": "Black",
+    "category": "electricas",
+    "description": "Fender Custom Shop Limited ’53 Telecaster\n\nAged Black Heavy Relic\n\nUna Telecaster con mucha actitud y una configuración que inevitablemente remite a algunas de las grandes guitarras del rock.\n\nCuerpo de ash, mango de maple y la clásica combinación de single coil en el puente con un Seymour Duncan Seth Lover humbucker en el neck. Una fórmula que lleva a pensar en guitarristas como Keith Richards y en esa tradición de modificar la Tele para darle un sonido más grande y con más cuerpo.\n\nPero hay otro detalle que hace especial a esta guitarra: el Heavy Dirty Checking. El acabado presenta ese cuarteado fino de la laca propio de las guitarras vintage, llevado acá al trabajo Heavy Relic de Fender Custom Shop. De cerca, el finish tiene tanta personalidad como la guitarra misma.\n\nUna Tele con estética de muchos años de ruta y una configuración hecha para rockear.",
+    "specs": [
+      "Cuerpo de ash",
+      "Mango de flame maple quartersawn",
+      "Radio 9.5”",
+      "21 trastes",
+      "Seymour Duncan Seth Lover Humbucker · Neck",
+      "Custom Shop Blackguard · Bridge",
+      "Aged Black",
+      "Heavy Relic",
+      "Heavy Dirty Checking",
+      "Fender Custom Shop · USA"
+    ],
+    "photos": [
+      "/assets/products/SG-006/1.jpg",
+      "/assets/products/SG-006/2.jpg",
+      "/assets/products/SG-006/3.jpg",
+      "/assets/products/SG-006/4.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1zRaXbzhV8OHWkJuqHL_9s3Q0Cp_KhSRzNbunMv42Uzg/edit"
+  },
+  {
+    "stockId": "SG-007",
+    "brand": "Fender",
+    "model": "Telecaster Custom Ltd '60",
+    "year": "2014",
+    "color": "Aged Vintage wchite (AVW)",
+    "category": "electricas",
+    "description": "",
+    "specs": [],
+    "photos": [],
+    "sourceDocument": null
+  },
+  {
+    "stockId": "SG-008",
+    "brand": "Fender",
+    "model": "Stratocaster hardtail",
+    "year": "1976",
+    "color": "Natural",
+    "category": "electricas",
+    "description": "Más de 50 años de historia en una Stratocaster.\n\nEsta Fender de 1974 llega hasta hoy con las marcas y el desgaste propios de una guitarra que fue tocada y vivida durante décadas. Una Strat con historia real, de una época muy particular de Fender y en su configuración Hardtail, sin tremolo.\n\nActualmente está equipada con un set de Fender Custom Shop Fat ’50s, que aporta ese sonido abierto, dinámico y definido tan característico de una buena Stratocaster.\n\nUna Fender con más de medio siglo encima, lista para seguir haciendo música.",
+    "specs": [
+      "Configuración Hardtail",
+      "Finish Natural",
+      "Mango de maple",
+      "3 Fender Custom Shop Fat ’50s",
+      "Made in USA",
+      "Año 1974"
+    ],
+    "photos": [
+      "/assets/products/SG-008/1.jpg",
+      "/assets/products/SG-008/2.jpg",
+      "/assets/products/SG-008/3.jpg",
+      "/assets/products/SG-008/4.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1zJCT_XHZVNvZvhadP9vgBkcWbXJqDzMOl67aPAtaD-A/edit"
+  },
+  {
+    "stockId": "SG-009",
+    "brand": "Fender",
+    "model": "Telecaster Thinline",
+    "year": "2007",
+    "color": "Natural",
+    "category": "electricas",
+    "description": "Una reedición de una de las Telecaster más particulares que Fender presentó durante los años 70.\n\nLa ’72 Thinline combina un cuerpo semi-hollow de ash con dos Wide Range humbuckers, logrando un sonido más grande y cálido que el de una Tele tradicional, sin perder el ataque y la personalidad Fender.\n\nUn diseño que encontró su lugar en el soul, blues y rock de los 70, con músicos como Curtis Mayfield entre quienes hicieron de la Thinline parte de su sonido.\n\nEsta unidad, fabricada en México en 2007, conserva toda esa estética setentosa: finish Natural, mango de maple, f-hole y los dos clásicos Wide Range.",
+    "specs": [
+      "Cuerpo semi-hollow de ash",
+      "Mango y diapasón de maple",
+      "2 Wide Range Humbuckers",
+      "21 trastes Vintage Style",
+      "F-hole",
+      "Finish Natural",
+      "Made in Mexico"
+    ],
+    "photos": [
+      "/assets/products/SG-009/1.jpg",
+      "/assets/products/SG-009/2.jpg",
+      "/assets/products/SG-009/3.jpg",
+      "/assets/products/SG-009/4.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1IJR1Bo22MM3x6nXDYGRYtDdipumiamLq1rWSfD9Wkxw/edit"
+  },
+  {
+    "stockId": "SG-010",
+    "brand": "Fender",
+    "model": "Acustica CC-60SCE",
+    "year": "2021",
+    "color": "Natural",
+    "category": "acusticas",
+    "description": "",
+    "specs": [],
+    "photos": [],
+    "sourceDocument": null
+  },
+  {
+    "stockId": "SG-011",
+    "brand": "Taylor",
+    "model": "Acustica 214e-g",
+    "year": "",
+    "color": "Natural",
+    "category": "acusticas",
+    "description": "Año 2010\n\nColor Natural\n\nUna Grand Auditorium cómoda, equilibrada y versátil, con el sonido claro y definido característico de Taylor.\n\nTapa sólida de Sitka spruce y fondo y aros de rosewood laminado. Una acústica muy fácil de tocar y pensada para funcionar bien tanto con púa como con dedos.",
+    "specs": [
+      "Cuerpo Grand Auditorium",
+      "Tapa sólida de Sitka spruce",
+      "Fondo y aros de rosewood laminado",
+      "Mango de sapele",
+      "Diapasón de ebony",
+      "Escala 25.5”",
+      "20 trastes",
+      "Electrónica Taylor ES-T",
+      "Finish Natural",
+      "Made in Mexico"
+    ],
+    "photos": [
+      "/assets/products/SG-011/1.jpg",
+      "/assets/products/SG-011/2.jpg",
+      "/assets/products/SG-011/3.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1bpSBWa4OAjvKFTiZDRkrhpUKI95TPXvk5SbU0ISdjn8/edit"
+  },
+  {
+    "stockId": "SG-012",
+    "brand": "Gibson",
+    "model": "Sj-200",
+    "year": "",
+    "color": "Natural",
+    "category": "acusticas",
+    "description": "Año 2011\n\nColor Natural\n\nUna de las acústicas más emblemáticas de Gibson y un verdadero ícono dentro de las guitarras Super Jumbo.\n\nLa SJ-200 fue concebida como uno de los modelos más importantes de la línea acústica de Gibson. Una guitarra de gran presencia, tanto por su tamaño y proyección como por una estética que se volvió inconfundible: puente Moustache, pickguard ornamentado e inlays Crown.\n\nConstruida con tapa de spruce y fondo y aros de maple, tiene ese carácter grande, abierto y definido que hizo de la SJ-200 una guitarra elegida por generaciones de músicos.\n\nUna de esas Gibson que se reconocen a varios metros de distancia.",
+    "specs": [
+      "Cuerpo Super Jumbo",
+      "Tapa sólida de spruce",
+      "Fondo y aros de maple",
+      "Mango de maple",
+      "Diapasón de rosewood",
+      "Escala 25.5”",
+      "20 trastes",
+      "Inlays Crown en madreperla",
+      "Puente Moustache™",
+      "Pickguard SJ-200 ornamentado",
+      "Clavijas Grover doradas",
+      "Finish Natural"
+    ],
+    "photos": [
+      "/assets/products/SG-012/1.jpg",
+      "/assets/products/SG-012/2.jpg",
+      "/assets/products/SG-012/3.jpg",
+      "/assets/products/SG-012/4.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/17ALmQAGziBt6Pieq9zhW7at_dLpr1O66VbK61NwEw-c/edit"
+  },
+  {
+    "stockId": "SG-013",
+    "brand": "Gibson",
+    "model": "Les Paul R8 Murphy Lab heavy aged",
+    "year": "2024",
+    "color": "Lemon Burst",
+    "category": "electricas",
+    "description": "Lemon Burst\n\nMurphy Lab Heavy Aged\n\nUna R8, la interpretación de Gibson Custom Shop de la legendaria Les Paul Standard de 1958.\n\nConstruida buscando recrear el feel y el carácter de aquellas primeras Burst de fines de los años 50, esta unidad suma el tratamiento Murphy Lab Heavy Aged: checking, desgaste del hardware y marcas de uso que le dan la apariencia de una Les Paul que lleva décadas haciendo música.\n\nEl Lemon Burst y el Heavy Aged terminan de darle una estética increíble, de esas que mejoran cuanto más se toca la guitarra.\n\nUna Les Paul nueva, pero con espíritu de vieja.",
+    "specs": [
+      "Cuerpo de mahogany",
+      "Tapa de maple",
+      "Mango de mahogany",
+      "Diapasón de rosewood",
+      "Perfil de mango ’58",
+      "Escala 24.75”",
+      "22 trastes",
+      "2 Humbuckers",
+      "ABR-1 Tune-O-Matic",
+      "Finish Lemon Burst",
+      "Murphy Lab Heavy Aged",
+      "Gibson Custom Shop · USA"
+    ],
+    "photos": [
+      "/assets/products/SG-013/1.jpg",
+      "/assets/products/SG-013/2.jpg",
+      "/assets/products/SG-013/3.jpg",
+      "/assets/products/SG-013/4.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/11Gk50GNfuL-iKc0qSlpQ9-skvcOnwEC56dg5RhpNHAU/edit"
+  },
+  {
+    "stockId": "SG-014",
+    "brand": "Gibson",
+    "model": "Firebird",
+    "year": "1994",
+    "color": "Sunburst",
+    "category": "electricas",
+    "description": "Una Firebird de los 90, una época especialmente buscada por muchos fanáticos de Gibson.\n\nEsta unidad tiene más de 30 años y fue tocada, rockeada y disfrutada como corresponde. El paso del tiempo se ve en ella y es justamente parte de su carácter.\n\nMini humbuckers, construcción neck-through y ese sonido filoso, definido y con mucha personalidad que hizo de la Firebird una guitarra única dentro de Gibson.\n\nUna Gibson noventosa, con historia y lista para seguir sumando kilómetros.",
+    "specs": [
+      "Construcción neck-through",
+      "Cuerpo y mango de mahogany",
+      "Diapasón de rosewood",
+      "22 trastes",
+      "Escala 24.75”",
+      "2 Mini Humbuckers",
+      "Tune-O-Matic + Stopbar",
+      "Finish Sunburst",
+      "Made in USA"
+    ],
+    "photos": [
+      "/assets/products/SG-014/1.jpg",
+      "/assets/products/SG-014/2.jpg",
+      "/assets/products/SG-014/3.jpg",
+      "/assets/products/SG-014/4.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1HhMDWl2jK_toVgdDxuuolrv_gODoJxxOFRngTuYL6jA/edit"
+  },
+  {
+    "stockId": "SG-015",
+    "brand": "Gibson",
+    "model": "Firebird Custom Shop",
+    "year": "",
+    "color": "Sunburst",
+    "category": "electricas",
+    "description": "",
+    "specs": [],
+    "photos": [
+      "/assets/products/SG-015/1.jpg",
+      "/assets/products/SG-015/2.jpg",
+      "/assets/products/SG-015/3.jpg",
+      "/assets/products/SG-015/4.jpg"
+    ],
+    "sourceDocument": null
+  },
+  {
+    "stockId": "SG-016",
+    "brand": "Gibson",
+    "model": "Sg 64 Murphy lab light aged",
+    "year": "",
+    "color": "vinage Cherry",
+    "category": "electricas",
+    "description": "Gibson Custom Shop 1964 SG Standard Reissue\n\nUna recreación de una de las SG más buscadas de los años 60, construida por Gibson Custom Shop y con tratamiento Murphy Lab Light Aged.\n\nUn envejecimiento sutil, pensado para recrear el checking y el paso del tiempo de una guitarra vintage sin llevar el desgaste al extremo.\n\nLa ’64 reúne todo lo que uno espera de una SG clásica: cuerpo liviano, doble cutaway, dos humbuckers y el inconfundible Maestro Vibrola.\n\nUna guitarra que recupera el espíritu de una SG de 1964, pero hecha para seguir tocándola.",
+    "specs": [
+      "Cuerpo de mahogany",
+      "Mango de mahogany",
+      "Diapasón de rosewood",
+      "22 trastes",
+      "Escala 24.75”",
+      "2 Humbuckers",
+      "ABR-1 Tune-O-Matic",
+      "Maestro Vibrola",
+      "Finish Cherry",
+      "Murphy Lab Light Aged",
+      "Gibson Custom Shop · USA"
+    ],
+    "photos": [
+      "/assets/products/SG-016/1.jpg",
+      "/assets/products/SG-016/2.jpg",
+      "/assets/products/SG-016/3.jpg",
+      "/assets/products/SG-016/4.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1ZUnqX6iRh9kIdpRRhtSDR5m253RjctphSJzR_h9-Egk/edit"
+  },
+  {
+    "stockId": "SG-017",
+    "brand": "Gibson",
+    "model": "Lucille",
+    "year": "",
+    "color": "",
+    "category": "electricas",
+    "description": "Ebony · 2012\n\nEbony\n\nUna de las signature más emblemáticas de Gibson, desarrollada junto a B.B. King y basada en la plataforma ES, pero con una identidad completamente propia.\n\nA simple vista recuerda a una ES-355, pero la Lucille tiene varios detalles que la hacen única: cuerpo semi-hollow sin F-holes, hardware dorado y el característico Varitone de 6 posiciones, que permite recorrer distintos colores y respuestas desde la misma guitarra.\n\nUna guitarra inseparable de la historia de B.B. King y del sonido del blues eléctrico. Elegante, particular y reconocible desde el primer vistazo.\n\nY, por supuesto, el nombre que B.B. King convirtió en leyenda: Lucille.",
+    "specs": [
+      "Construcción semi-hollow sin F-holes",
+      "Cuerpo de maple laminado con bloque central",
+      "Mango de maple",
+      "Diapasón de ebony",
+      "Escala 24.75”",
+      "22 trastes",
+      "Inlays de bloque",
+      "2 Humbuckers Gibson",
+      "Varitone de 6 posiciones",
+      "Hardware dorado",
+      "Finish Ebony",
+      "Made in USA"
+    ],
+    "photos": [
+      "/assets/products/SG-017/1.jpg",
+      "/assets/products/SG-017/2.jpg",
+      "/assets/products/SG-017/3.jpg",
+      "/assets/products/SG-017/4.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1uynAl8SWWErlpg827dwHOsQfi0Gzeuaw5HQLNC5fY1I/edit"
+  },
+  {
+    "stockId": "SG-018",
+    "brand": "Gibson",
+    "model": "Es-125",
+    "year": "",
+    "color": "",
+    "category": "electricas",
+    "description": "Año  1962\n\nSunburst\n\nUna de las hollowbody más simples y con más personalidad de Gibson. Cuerpo fino, construcción completamente hueca y una estética que representa perfectamente a las Gibson de su época.\n\nEsta unidad conserva su configuración original, con la excepción del pickup, reemplazado por un Parsons Street.\n\nUna guitarra liviana, resonante y con muchísimo carácter.",
+    "specs": [
+      "Cuerpo hollowbody",
+      "Terminación Sunburst",
+      "Pickup Parsons Street",
+      "Configuración single pickup",
+      "Made in USA"
+    ],
+    "photos": [
+      "/assets/products/SG-018/1.jpg",
+      "/assets/products/SG-018/2.jpg",
+      "/assets/products/SG-018/3.jpg",
+      "/assets/products/SG-018/4.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1R196FD1m_tPT_CHnDF4SgqUXxI7gh1TZEkC2a_6XLvs/edit"
+  },
+  {
+    "stockId": "SG-019",
+    "brand": "Fender",
+    "model": "Amp Pro Jr",
+    "year": "",
+    "color": "",
+    "category": "amplificadores",
+    "description": "15 Watts · All Tube\n\nUno de los Fender más simples y directos de la familia.\n\nEl Pro Junior III parte de una fórmula casi imposible de simplificar más: 15 watts valvulares, un parlante de 10” y solamente dos controles: Volume y Tone.\n\nSin canales, sin reverb y sin demasiadas vueltas. A bajo volumen entrega un clean Fender claro y dinámico; cuando empezamos a subirlo, las EL84 entran en juego y aparece ese overdrive natural, crudo y sensible a la mano derecha.\n\nUn ampli chico que responde muchísimo a la guitarra, al volumen y a cómo uno toca. Ideal también como plataforma simple para pedales.\n\nDe esos amplificadores donde la gracia está justamente en lo poco que hay entre la guitarra y el parlante.",
+    "specs": [
+      "15 watts valvulares",
+      "1x10”",
+      "2 válvulas EL84 de potencia",
+      "2 válvulas 12AX7 en preamp",
+      "Controles Volume / Tone",
+      "Made in Mexico"
+    ],
+    "photos": [
+      "/assets/products/SG-019/1.jpg",
+      "/assets/products/SG-019/2.jpg",
+      "/assets/products/SG-019/3.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1pvOz02qjJF0ONyEvUwHAl5WFD9tig1sn3v0ThKhyTuM/edit"
+  },
+  {
+    "stockId": "SG-020",
+    "brand": "Fender",
+    "model": "Amp Blues Jr",
+    "year": "",
+    "color": "",
+    "category": "amplificadores",
+    "description": "Uno de los amplificadores valvulares más conocidos de Fender, en una configuración especialmente interesante.\n\nCompacto, simple y con esos 15 watts valvulares que permiten llevarlo desde sonidos limpios hasta un overdrive natural sin necesitar volúmenes imposibles.\n\nEsta unidad está equipada con un Celestion Greenback de 12”, un parlante histórico dentro del sonido británico, que le aporta un carácter diferente al Blues Junior tradicional: medios más presentes, agudos más suaves y una respuesta que se vuelve especialmente linda cuando el ampli empieza a romper.\n\nUn Fender chico, transportable y con una combinación que invita a subir el volumen.",
+    "specs": [
+      "15 watts valvulares",
+      "Parlante Celestion Greenback 12”",
+      "3 válvulas 12AX7 en preamp",
+      "2 válvulas EL84 de potencia",
+      "Reverb a resortes",
+      "Controles Bass / Middle / Treble",
+      "Master Volume",
+      "FAT Switch"
+    ],
+    "photos": [
+      "/assets/products/SG-020/1.jpg",
+      "/assets/products/SG-020/2.jpg",
+      "/assets/products/SG-020/3.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1IqvYL61zJMsr6lWkJv1LlaQNuNejliKqtv9LsxDDXVw/edit"
+  },
+  {
+    "stockId": "SG-021",
+    "brand": "Fender",
+    "model": "Amp deluxe (transistor)",
+    "year": "",
+    "color": "",
+    "category": "amplificadores",
+    "description": "90 Watts · Celestion\n\nUn Fender de los 90 pensado para tener potencia, buenos cleans y volumen de sobra en un formato relativamente compacto.\n\nEl Deluxe 90 entrega 90 watts de potencia, con un canal limpio de carácter Fender y un segundo canal con Drive y More Drive para llevarlo hacia sonidos más saturados.\n\nEsta unidad está equipada con parlante Celestion de 12”, una combinación que funciona especialmente bien como plataforma para pedales y para quien busca un ampli con mucho headroom.\n\nSimple, potente y confiable. Un Fender hecho para ensayar, tocar en vivo y bancarse el uso.",
+    "specs": [
+      "90 watts",
+      "Solid State",
+      "Celestion 12”",
+      "2 canales",
+      "Clean / Drive / More Drive",
+      "Reverb",
+      "Ecualización de 3 bandas",
+      "Footswitch compatible",
+      "Made in Mexico"
+    ],
+    "photos": [
+      "/assets/products/SG-021/1.jpg",
+      "/assets/products/SG-021/2.jpg",
+      "/assets/products/SG-021/3.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1utgggsobA3C67sUPPGTmNFaqJa404RN2avspHMmgB_k/edit"
+  },
+  {
+    "stockId": "SG-022",
+    "brand": "Fender",
+    "model": "Amp Vibrolux",
+    "year": "",
+    "color": "",
+    "category": "amplificadores",
+    "description": "Un verdadero Fender Blackface de los 60 y uno de los formatos más buscados de la época.\n\nCon 35 watts valvulares y dos parlantes de 10”, el Vibrolux Reverb tiene ese equilibrio difícil de encontrar entre el headroom de los Fender grandes y la respuesta más manejable de un combo mediano. Limpios abiertos, brillantes y con mucho cuerpo, sumados al reverb y vibrato clásicos de Fender.\n\nEsta unidad de 1966 conserva gran parte de sus componentes originales, incluyendo transformadores, parlantes Jensen, circuito, tolex, grill cloth y hardware. Los capacitores electrolíticos fueron reemplazados para asegurar un funcionamiento confiable.\n\nEl desgaste visible del grill y del gabinete es parte natural de sus casi 60 años de historia.",
+    "specs": [
+      "Año 1966",
+      "Era Blackface",
+      "35 watts valvulares",
+      "2 x parlantes Jensen cerámicos originales de 10”",
+      "Transformadores originales con sus respectivos stamps",
+      "Circuito original",
+      "Tube chart original con sus estampas visibles",
+      "Reverb a resortes",
+      "Vibrato Fender",
+      "Grill cloth original",
+      "Tolex original",
+      "Manija, perillas y hardware originales",
+      "Footswitch original",
+      "Capacitores electrolíticos reemplazados para un funcionamiento confiable"
+    ],
+    "photos": [
+      "/assets/products/SG-022/1.jpg",
+      "/assets/products/SG-022/2.jpg",
+      "/assets/products/SG-022/3.jpg",
+      "/assets/products/SG-022/4.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1ErFM8eTx2HDUWEYLPo7wipEXjLLTT-3mUygldMo0gKs/edit"
+  },
+  {
+    "stockId": "SG-023",
+    "brand": "Fender",
+    "model": "Amp Princeton",
+    "year": "",
+    "color": "",
+    "category": "amplificadores",
+    "description": "",
+    "specs": [],
+    "photos": [],
+    "sourceDocument": null
+  },
+  {
+    "stockId": "SG-024",
+    "brand": "Fender",
+    "model": "Amp deluxe reverb Ltd",
+    "year": "",
+    "color": "",
+    "category": "amplificadores",
+    "description": "Uno de los grandes clásicos de Fender, en una versión Limited Edition con una combinación especialmente interesante.\n\nEl Deluxe Reverb es conocido por sus cleans definidos, su reverb a resortes y el tremolo característico de Fender. Con sus 22 watts valvulares, tiene potencia suficiente para escenario pero también permite empezar a encontrar esa saturación natural del ampli sin irse a volúmenes enormes.\n\nEsta edición cuenta con un Celestion G12M Greenback de 12”, un parlante histórico de carácter británico que le aporta medios más presentes y una respuesta más cálida cuando el ampli empieza a romper.\n\nUna mezcla muy linda entre el clásico sonido Fender y la personalidad de un Greenback.",
+    "specs": [
+      "22 watts valvulares",
+      "Celestion G12M Greenback de 12”",
+      "2 canales: Custom / Vintage",
+      "Reverb a resortes",
+      "Tremolo Fender",
+      "Controles Speed / Intensity",
+      "Limited Edition",
+      "Footswitch"
+    ],
+    "photos": [
+      "/assets/products/SG-024/1.jpg",
+      "/assets/products/SG-024/2.jpg",
+      "/assets/products/SG-024/3.jpg",
+      "/assets/products/SG-024/4.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1vNCKGNwMP0BoR4ukRozTNWr_47a3X63vZnp0r2Uuv00/edit"
+  },
+  {
+    "stockId": "SG-025",
+    "brand": "Fender",
+    "model": "Amp Twin 57",
+    "year": "",
+    "color": "",
+    "category": "amplificadores",
+    "description": "5E8-A · Hand-Wired · 2x12\n\nUna recreación de uno de los grandes amplificadores Tweed de los años 50.\n\nEl ’57 Twin-Amp reproduce el circuito 5E8-A “Low Powered Twin” de 1955–57: 40 watts completamente valvulares, circuito hand-wired, dos 6L6 y la particular configuración de doble rectificación que Fender utilizaba en aquellos años.\n\nUn ampli con mucho volumen y headroom, pero todavía con esa respuesta cálida y dinámica de los Fender Tweed. Cuando se lo empieza a exigir, el clean va dando lugar a una saturación grande, rica en armónicos y muy sensible a la forma de tocar.\n\nEsta unidad tiene una modificación especialmente interesante: actualmente está equipada con 2 Celestion Vintage 30 de 12”, que le dan un carácter más firme, con medios más presentes y otra respuesta cuando el ampli empieza a romper.\n\nY un dato importante: conservamos también los dos parlantes Alnico originales, por lo que puede volver a su configuración original.\n\nEl Tweed Twin es parte de una larga historia de sonidos de rock y blues, asociado a guitarristas como Eric Clapton y Keith Richards, entre muchos otros.\n\nUn ampli histórico, hand-wired y con dos personalidades disponibles según qué parlantes elijamos.",
+    "specs": [
+      "Circuito ’57 Twin 5E8-A",
+      "40 watts valvulares",
+      "Hand-Wired",
+      "2 válvulas 6L6 de potencia",
+      "Doble rectificación 5U4",
+      "2x12” Celestion Vintage 30 instalados",
+      "Incluye sus 2 parlantes Alnico originales",
+      "Canales Normal / Bright",
+      "Presence / Bass / Treble",
+      "Tweed cabinet"
+    ],
+    "photos": [
+      "/assets/products/SG-025/1.jpg",
+      "/assets/products/SG-025/2.jpg",
+      "/assets/products/SG-025/3.jpg",
+      "/assets/products/SG-025/4.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1gjMm_DG_gxlM35QOo-YxpKP2KYinywEX6hlwaU0yMWk/edit"
+  },
+  {
+    "stockId": "SG-026",
+    "brand": "Fender",
+    "model": "Amp Concert",
+    "year": "",
+    "color": "",
+    "category": "amplificadores",
+    "description": "Rivera Era · Made in USA\n\nUno de los Fender más interesantes de comienzos de los años 80 y parte de la recordada Rivera Era de la marca.\n\nEl Concert nació en un momento particular: Fender seguía teniendo como referencia sus grandes sonidos limpios —en la tradición de amplificadores como el Super Reverb— pero el mundo de la guitarra estaba cambiando. Mesa/Boogie había demostrado que un mismo ampli podía ofrecer un gran clean y, al mismo tiempo, mucha más ganancia y sustain.\n\nAhí aparece esta generación del Concert.\n\n60 watts completamente valvulares, con dos canales de personalidades muy distintas. El primero entrega ese clean grande, abierto y con muchísimo headroom que uno espera de un Fender; el segundo incorpora Gain, Master Volume y Mid Boost, llevando el ampli hacia sonidos más saturados y propios de aquella nueva escuela de principios de los 80.\n\nUna especie de encuentro entre la tradición Fender y la filosofía de los primeros amplificadores high-gain americanos.\n\nEsta unidad es la versión 1x12, Made in USA, con reverb a resortes y effects loop.\n\nUn Fender de una época corta y muy particular de la marca, cuando los grandes cleans empezaban a convivir con amplificadores cada vez más versátiles y con más ganancia.",
+    "specs": [
+      "60 watts valvulares",
+      "2 válvulas 6L6GC de potencia",
+      "Configuración 1x12”",
+      "Parlante Fender",
+      "2 canales independientes",
+      "Gain / Master Volume",
+      "Mid Boost",
+      "Reverb a resortes",
+      "Effects Loop",
+      "Salida para parlante externo",
+      "Rivera Era",
+      "Made in USA"
+    ],
+    "photos": [
+      "/assets/products/SG-026/1.jpg",
+      "/assets/products/SG-026/2.jpg",
+      "/assets/products/SG-026/3.jpg"
+    ],
+    "sourceDocument": "https://docs.google.com/document/d/1GE3DZQE397K-2FIN5klLtRfaccdqXuGI7sq4pciMzKI/edit"
+  },
+  {
+    "stockId": "SG-027",
+    "brand": "Fender",
+    "model": "Amp Blues Deluxe",
+    "year": "",
+    "color": "",
+    "category": "amplificadores",
+    "description": "",
+    "specs": [],
+    "photos": [],
+    "sourceDocument": null
+  },
+  {
+    "stockId": "SG-028",
+    "brand": "Singletone",
+    "model": "Princeton",
+    "year": "",
+    "color": "",
+    "category": "amplificadores",
+    "description": "",
+    "specs": [],
+    "photos": [],
+    "sourceDocument": null
+  }
+]

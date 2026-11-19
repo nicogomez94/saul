@@ -1,20 +1,44 @@
-# Saúl Guitars — prototipo de catálogo
+# Saúl Guitars
 
-Prototipo estático en español, hecho con HTML, CSS y JavaScript. Usa el logo, la foto de inicio y una muestra de modelos reales de `Stock.xlsx`. Las fotos y reseñas de la muestra se asociaron con las carpetas por modelo del [Drive del cliente](https://drive.google.com/drive/folders/1GYVMxwF7Y1J-VprinE9v1M13ThN2Afkd).
+Catálogo y panel de administración con React, Express, Prisma y PostgreSQL. El catálogo inicial replica los 28 registros de la [hoja de stock de Drive](https://docs.google.com/spreadsheets/d/1LZjA4sqf1LO6XCqxRWonPNy9jsF_HHgf4-Hlr3cGo1k/edit) al 19/11/2026. Marca, modelo, año, color y código SG se mantienen como aparecen en la hoja. Las categorías se asignaron por tipo de instrumento porque la columna de categoría está vacía.
 
-## Vistas
+## Funciones
 
-- `index.html`: catálogo con búsqueda, filtros por categoría y marca, fichas de detalle con descripción y características, consultas por correo y contacto.
-- `admin.html`: maqueta interactiva para agregar, editar y quitar productos, sus descripciones y características. Los cambios se guardan únicamente en `localStorage` del navegador; no hay autenticación, servidor ni base de datos.
+- Catálogo público con búsqueda, filtros por categoría y marca, detalle de producto y galerías.
+- Selección persistente en el navegador; consulta conjunta por WhatsApp con códigos y nombres de las piezas.
+- Panel privado con inicio de sesión, altas, edición, archivo de productos, galerías, carga de fotos, estados de publicación y configuración del número de WhatsApp.
+- Formulario de novedades con suscriptores guardados en PostgreSQL y visibles en el panel.
+- Fotografías nuevas guardadas en PostgreSQL, sin depender del disco temporal del servidor.
 
-Para verlo localmente: `python3 -m http.server 8765` y abrir `http://localhost:8765/`.
+El número de WhatsApp se puede cargar desde **Administración → Configuración**. Hasta entonces, el enlace abre WhatsApp con el mensaje preparado y permite elegir el destinatario. El sitio no cobra ni confirma ventas: precio y disponibilidad se consultan al comercio.
 
-## Datos pendientes para la versión definitiva
+## Desarrollo local
 
-- Número comercial de WhatsApp. El botón actual abre la opción de compartir una consulta, sin destinatario fijo.
-- Dirección exacta y mapa definitivo. El mapa actual muestra Buenos Aires como referencia.
-- Precios y disponibilidad. La planilla de stock no contiene precios y la muestra no incluye todo el inventario.
-- Confirmar discrepancias entre fuentes antes de cargar el catálogo definitivo: el stock indica 1976 para SG-008 y el documento de Drive dice 1974; SG-003 figura Blonde en stock y Butterscotch en Drive; SG-011 no tiene año en stock y el documento indica 2010. La carpeta de fotos de SG-010 estaba vacía al revisar Drive.
-- Integración real del panel, mailing y catálogo con base de datos y acceso privado.
+Requiere Node.js 20.19+ y PostgreSQL. Crear una base `saul_guitars` y un archivo `server/.env` a partir de [`.env.example`](.env.example), con `DATABASE_URL`, `ADMIN_EMAIL`, `ADMIN_PASSWORD` o `ADMIN_PASSWORD_HASH`, y `SESSION_SECRET`. El archivo `server/.env` local ya contiene una contraseña aleatoria y no se publica.
 
-La carpeta `WEB/` contiene material fuente entregado por el cliente y queda fuera del repositorio publicado. `assets/` contiene únicamente imágenes optimizadas para el prototipo.
+```sh
+npm ci
+npm run prisma:generate -w server
+npm run db:deploy
+npm run build
+npm start
+```
+
+- Catálogo: http://localhost:3001/
+- Panel: http://localhost:3001/admin
+- Prueba de integración con el servidor levantado: `npm test`
+
+Para desarrollo con actualización automática: `npm run dev` (cliente en http://localhost:5173 y API en http://localhost:3001).
+
+## Publicación
+
+Esta rama requiere **un Web Service de Node y una base PostgreSQL**, con el mismo origen para frontend y API. No sirve como Static Site. Configuración sugerida para Render:
+
+- Build command: `npm ci && npm run build && npm run db:deploy`
+- Start command: `npm start`
+- Variables: `DATABASE_URL`, `ADMIN_EMAIL`, `ADMIN_PASSWORD_HASH`, `SESSION_SECRET`, `NODE_ENV=production`; `WHATSAPP_NUMBER` es opcional porque también se administra desde el panel.
+- `STOCK_SERIALS_JSON` permite importar los números de serie privados en la carga inicial. Se puede omitir y completarlos desde el panel.
+
+`npm run db:deploy` aplica migraciones y agrega solo los códigos de stock que todavía no existan; no sobrescribe cambios realizados desde el panel. Antes de publicar, revisar [la conciliación del stock](data/conciliacion-stock.md), completar el número de WhatsApp y confirmar la disponibilidad de las piezas.
+
+Las fotos optimizadas están en `client/public/assets/products/`. El material fuente original permanece en `WEB/`, fuera del repositorio. [`scripts/build-catalog.mjs`](scripts/build-catalog.mjs) reconstruye la muestra a partir de la captura de Drive y de las fotos locales cuando `WEB/` está disponible.

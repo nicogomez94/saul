@@ -2,3 +2,10 @@
 WEB/
 assets/tele-detail.jpg
 assets/guild-detail.jpg
+node_modules/
+client/dist/
+.env
+server/.env
+server/generated/
+.private/
+*.log

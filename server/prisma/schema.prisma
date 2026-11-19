@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/client"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Product {
+  id          String         @id @default(cuid())
+  stockId     String         @unique
+  brand       String
+  model       String
+  year        String         @default("")
+  color       String         @default("")
+  serial      String         @default("")
+  category    String
+  description String         @default("") @db.Text
+  specs       Json
+  status      String         @default("published")
+  sortOrder   Int            @default(0)
+  images      ProductImage[]
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+}
+
+model ProductImage {
+  id        String   @id @default(cuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  path      String?
+  data      Bytes?
+  mimeType  String   @default("image/jpeg")
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+
+  @@index([productId, sortOrder])
+}
+
+model Setting {
+  key   String @id
+  value String @default("")
+}
+
+model Subscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}

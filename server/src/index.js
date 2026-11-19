@@ -114,6 +114,10 @@ const productSchema = z.object({
   year: z.string().trim().max(20).default(""),
   color: z.string().trim().max(100).default(""),
   serial: z.string().trim().max(100).default(""),
+  cost: z.string().trim().max(100).default(""),
+  salePrice: z.string().trim().max(100).default(""),
+  closePrice: z.string().trim().max(100).default(""),
+  profit: z.string().trim().max(100).default(""),
   category: z.enum([
     "electricas",
     "acusticas",
@@ -128,10 +132,11 @@ const productSchema = z.object({
 });
 const includeImages = { images: { orderBy: { sortOrder: "asc" } } };
 function presentProduct(product, isAdmin = false) {
-  const { images, serial, ...fields } = product;
+  const { images, serial, cost, salePrice, closePrice, profit, ...fields } =
+    product;
   return {
     ...fields,
-    ...(isAdmin ? { serial } : {}),
+    ...(isAdmin ? { serial, cost, salePrice, closePrice, profit } : {}),
     images: images.map((image) => ({
       id: image.id,
       src: image.path || `/api/images/${image.id}`,
@@ -141,12 +146,10 @@ function presentProduct(product, isAdmin = false) {
 }
 function errorResponse(res, error) {
   if (error instanceof z.ZodError)
-    return res
-      .status(400)
-      .json({
-        error: "Revisá los datos del formulario.",
-        details: error.flatten(),
-      });
+    return res.status(400).json({
+      error: "Revisá los datos del formulario.",
+      details: error.flatten(),
+    });
   if (error.code === "P2002")
     return res.status(409).json({ error: "Ese código de stock ya existe." });
   if (error.code === "P2025")
@@ -435,11 +438,9 @@ if (fs.existsSync(dist)) {
 }
 app.use((error, _req, res, _next) => {
   if (error instanceof multer.MulterError)
-    return res
-      .status(400)
-      .json({
-        error: "La foto excede el límite de 8 MB o hay demasiadas fotos.",
-      });
+    return res.status(400).json({
+      error: "La foto excede el límite de 8 MB o hay demasiadas fotos.",
+    });
   errorResponse(res, error);
 });
 

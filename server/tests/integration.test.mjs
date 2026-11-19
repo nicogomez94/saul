@@ -13,6 +13,9 @@ const testEmail = "test.integration@example.org";
 const snapshot = JSON.parse(
   fs.readFileSync("data/drive-snapshot.json", "utf8"),
 );
+const privateFinancials = JSON.parse(
+  fs.readFileSync(".private/stock-financials.json", "utf8"),
+);
 
 test("el catálogo público coincide con los 28 registros de la hoja de Drive", async () => {
   const response = await fetch(base + "/api/products");
@@ -27,6 +30,9 @@ test("el catálogo público coincide con los 28 registros de la hoja de Drive", 
     assert.equal(product.year, row.year);
     assert.equal(product.color, row.color);
     assert.equal("serial" in product, false);
+    for (const field of ["cost", "salePrice", "closePrice", "profit"]) {
+      assert.equal(field in product, false);
+    }
   }
 });
 
@@ -51,6 +57,19 @@ test("catálogo y panel persisten productos, fotos y estados", async () => {
     cookie = response.headers.get("set-cookie")?.split(";")[0] || "";
     assert.ok(cookie);
     const headers = { "Content-Type": "application/json", Cookie: cookie };
+
+    response = await fetch(base + "/api/admin/products", {
+      headers: { Cookie: cookie },
+    });
+    const adminProducts = await response.json();
+    for (const row of snapshot.stock) {
+      const product = adminProducts.find((item) => item.stockId === row.id);
+      assert.ok(product, `Falta ${row.id} en el panel`);
+      const financials = privateFinancials[row.id] || {};
+      for (const field of ["cost", "salePrice", "closePrice", "profit"]) {
+        assert.equal(product[field], financials[field] || "");
+      }
+    }
 
     response = await fetch(base + "/api/subscribers", {
       method: "POST",
@@ -79,6 +98,10 @@ test("catálogo y panel persisten productos, fotos y estados", async () => {
       year: "2026",
       color: "Natural",
       serial: "TEST",
+      cost: "100",
+      salePrice: "200",
+      closePrice: "150",
+      profit: "50",
       category: "electricas",
       description: "Pieza temporal.",
       specs: ["Prueba"],
@@ -91,6 +114,7 @@ test("catálogo y panel persisten productos, fotos y estados", async () => {
     });
     assert.equal(response.status, 201);
     let product = await response.json();
+    assert.equal(product.cost, "100");
 
     const form = new FormData();
     const bytes = fs.readFileSync("client/public/assets/products/SG-002/1.jpg");
@@ -126,7 +150,12 @@ test("catálogo y panel persisten productos, fotos y estados", async () => {
     });
     assert.equal(response.status, 200);
     response = await fetch(base + `/api/products/${stockId}`);
-    assert.equal((await response.json()).model, "Integración editada");
+    const publicProduct = await response.json();
+    assert.equal(publicProduct.model, "Integración editada");
+    assert.equal("cost" in publicProduct, false);
+    assert.equal("salePrice" in publicProduct, false);
+    assert.equal("closePrice" in publicProduct, false);
+    assert.equal("profit" in publicProduct, false);
 
     response = await fetch(base + `/api/admin/products/${product.id}`, {
       method: "DELETE",

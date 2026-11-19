@@ -21,13 +21,34 @@ const serials = process.env.STOCK_SERIALS_JSON
   : fs.existsSync(privateSerialsPath)
     ? JSON.parse(fs.readFileSync(privateSerialsPath, "utf8"))
     : {};
+const privateFinancialsPath = path.join(root, ".private/stock-financials.json");
+const financials = process.env.STOCK_FINANCIALS_JSON
+  ? JSON.parse(process.env.STOCK_FINANCIALS_JSON)
+  : fs.existsSync(privateFinancialsPath)
+    ? JSON.parse(fs.readFileSync(privateFinancialsPath, "utf8"))
+    : {};
 
 try {
   for (const [index, item] of catalog.entries()) {
     const existing = await prisma.product.findUnique({
       where: { stockId: item.stockId },
     });
-    if (existing) continue;
+    const internal = financials[item.stockId] || {};
+    if (existing) {
+      if (process.argv.includes("--fill-internal")) {
+        await prisma.product.update({
+          where: { id: existing.id },
+          data: {
+            serial: serials[item.stockId] || "",
+            cost: internal.cost || "",
+            salePrice: internal.salePrice || "",
+            closePrice: internal.closePrice || "",
+            profit: internal.profit || "",
+          },
+        });
+      }
+      continue;
+    }
     await prisma.product.create({
       data: {
         stockId: item.stockId,
@@ -36,6 +57,10 @@ try {
         year: item.year || "",
         color: item.color || "",
         serial: serials[item.stockId] || "",
+        cost: internal.cost || "",
+        salePrice: internal.salePrice || "",
+        closePrice: internal.closePrice || "",
+        profit: internal.profit || "",
         category: item.category,
         description: item.description || "",
         specs: item.specs,

@@ -1,0 +1,5 @@
+-- AlterTable
+ALTER TABLE "Product" ADD COLUMN     "closePrice" TEXT NOT NULL DEFAULT '',
+ADD COLUMN     "cost" TEXT NOT NULL DEFAULT '',
+ADD COLUMN     "profit" TEXT NOT NULL DEFAULT '',
+ADD COLUMN     "salePrice" TEXT NOT NULL DEFAULT '';

@@ -31,6 +31,10 @@ const blank = {
   year: "",
   color: "",
   serial: "",
+  cost: "",
+  salePrice: "",
+  closePrice: "",
+  profit: "",
   category: "electricas",
   description: "",
   specsText: "",
@@ -147,6 +151,10 @@ export default function Admin() {
         year: form.year,
         color: form.color,
         serial: form.serial,
+        cost: form.cost,
+        salePrice: form.salePrice,
+        closePrice: form.closePrice,
+        profit: form.profit,
         category: form.category,
         description: form.description,
         specs: form.specsText
@@ -558,6 +566,41 @@ export default function Admin() {
                   maxLength={100}
                   value={form.serial}
                   onChange={(event) => update("serial", event.target.value)}
+                />
+              </label>
+              <div className="wide-field internal-heading">
+                DATOS INTERNOS · NO VISIBLES EN EL CATÁLOGO
+              </div>
+              <label>
+                Costo
+                <input
+                  maxLength={100}
+                  value={form.cost}
+                  onChange={(event) => update("cost", event.target.value)}
+                />
+              </label>
+              <label>
+                Valor de venta
+                <input
+                  maxLength={100}
+                  value={form.salePrice}
+                  onChange={(event) => update("salePrice", event.target.value)}
+                />
+              </label>
+              <label>
+                Valor de cierre
+                <input
+                  maxLength={100}
+                  value={form.closePrice}
+                  onChange={(event) => update("closePrice", event.target.value)}
+                />
+              </label>
+              <label>
+                Ganancia
+                <input
+                  maxLength={100}
+                  value={form.profit}
+                  onChange={(event) => update("profit", event.target.value)}
                 />
               </label>
               <label className="wide-field">

@@ -7,6 +7,7 @@ Catálogo y panel de administración con React, Express, Prisma y PostgreSQL. El
 - Catálogo público con búsqueda, filtros por categoría y marca, detalle de producto y galerías.
 - Selección persistente en el navegador; consulta conjunta por WhatsApp con códigos y nombres de las piezas.
 - Panel privado con inicio de sesión, altas, edición, archivo de productos, galerías, carga de fotos, estados de publicación y configuración del número de WhatsApp.
+- Números de serie y valores internos de la hoja de stock (costo, venta, cierre y ganancia) editables solo en el panel, ausentes de la API pública.
 - Formulario de novedades con suscriptores guardados en PostgreSQL y visibles en el panel.
 - Fotografías nuevas guardadas en PostgreSQL, sin depender del disco temporal del servidor.
 
@@ -37,7 +38,7 @@ Esta rama requiere **un Web Service de Node y una base PostgreSQL**, con el mism
 - Build command: `npm ci && npm run build && npm run db:deploy`
 - Start command: `npm start`
 - Variables: `DATABASE_URL`, `ADMIN_EMAIL`, `ADMIN_PASSWORD_HASH`, `SESSION_SECRET`, `NODE_ENV=production`; `WHATSAPP_NUMBER` es opcional porque también se administra desde el panel.
-- `STOCK_SERIALS_JSON` permite importar los números de serie privados en la carga inicial. Se puede omitir y completarlos desde el panel.
+- `STOCK_SERIALS_JSON` y `STOCK_FINANCIALS_JSON` permiten importar los datos privados de la hoja en la carga inicial. Se pueden omitir y completarlos desde el panel.
 
 `npm run db:deploy` aplica migraciones y agrega solo los códigos de stock que todavía no existan; no sobrescribe cambios realizados desde el panel. Antes de publicar, revisar [la conciliación del stock](data/conciliacion-stock.md), completar el número de WhatsApp y confirmar la disponibilidad de las piezas.
 

@@ -26,4 +26,4 @@ Fuente principal: [hoja “Stock” de Drive](https://docs.google.com/spreadshee
 - La hoja no tiene una columna de disponibilidad; inicialmente los 28 artículos están publicados. Confirmar cuáles siguen disponibles antes de la publicación final.
 - Falta el número comercial de WhatsApp. El panel permite cargarlo sin modificar código.
 
-Los valores financieros de la hoja no forman parte del catálogo ni del repositorio. El panel gestiona productos, fotos y suscriptores; no muestra costos ni márgenes.
+Los valores financieros de la hoja y los números de serie se importaron en la base local y se muestran únicamente en el panel. No se incluyen en el repositorio ni en la API pública. Para llevarlos a producción habrá que suministrar `STOCK_SERIALS_JSON` y `STOCK_FINANCIALS_JSON` como variables privadas o cargarlos desde el panel.

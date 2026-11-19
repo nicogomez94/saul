@@ -513,6 +513,14 @@
 .form-grid textarea {
   min-height: 100px;
 }
+.internal-heading {
+  padding-top: 12px;
+  border-top: 1px solid #e4d9cb;
+  color: #96734e;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
 .form-grid label small {
   display: inline;
   color: #928678;

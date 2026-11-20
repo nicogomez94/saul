@@ -399,6 +399,39 @@ app.post(
     res.status(201).json(presentProduct(updated, true));
   }),
 );
+app.put(
+  "/api/admin/products/:id/images/order",
+  requireAdmin,
+  route(async (req, res) => {
+    const { imageIds } = z
+      .object({ imageIds: z.array(z.string().min(1)).max(100) })
+      .parse(req.body);
+    const product = await prisma.product.findUnique({
+      where: { id: req.params.id },
+      include: includeImages,
+    });
+    if (!product)
+      return res.status(404).json({ error: "Producto no encontrado." });
+    const currentIds = product.images.map((image) => image.id);
+    if (
+      imageIds.length !== currentIds.length ||
+      !imageIds.every((id) => currentIds.includes(id))
+    )
+      return res
+        .status(400)
+        .json({ error: "La selección de fotos no es válida." });
+    await prisma.$transaction(
+      imageIds.map((id, sortOrder) =>
+        prisma.productImage.update({ where: { id }, data: { sortOrder } }),
+      ),
+    );
+    const updated = await prisma.product.findUnique({
+      where: { id: product.id },
+      include: includeImages,
+    });
+    res.json(presentProduct(updated, true));
+  }),
+);
 app.delete(
   "/api/admin/images/:id",
   requireAdmin,

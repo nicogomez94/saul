@@ -668,3 +668,349 @@
   background: #211911;
   color: #f3eee6;
 }
+
+/* Vistas independientes del panel */
+.admin-main {
+  min-height: 100vh;
+}
+.admin-page {
+  margin-top: 27px;
+  animation: admin-page-in 0.32s ease both;
+}
+@keyframes admin-page-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.admin-message {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 20px 0 0;
+}
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 18px;
+}
+.dashboard-card {
+  min-height: 250px;
+  margin-bottom: 0;
+}
+.dashboard-card h2 {
+  margin: 15px 0 10px;
+  font-family: var(--serif);
+  font-size: 29px;
+  font-weight: 500;
+}
+.dashboard-card p {
+  max-width: 520px;
+  color: #756b61;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.dashboard-card .button {
+  margin-top: 20px;
+}
+.dashboard-card.dark {
+  background: #2a211a;
+  color: #f4eadc;
+}
+.dashboard-card.dark > svg {
+  color: #d4aa70;
+}
+.dashboard-card.dark p {
+  color: #bcae9e;
+}
+.photo-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #89745b;
+}
+.empty-state {
+  padding: 24px 10px 5px;
+  color: #817568;
+  text-align: center;
+}
+.settings-page {
+  min-height: 420px;
+}
+
+/* Miniaturas y elección de portada */
+.admin-gallery {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+  max-width: none;
+  margin-top: 20px;
+}
+.admin-gallery > .gallery-item {
+  height: auto;
+}
+.gallery-item {
+  overflow: hidden;
+  border: 1px solid #ddd1c2;
+  background: #fff;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.gallery-item.is-cover {
+  border-color: #b98b50;
+  box-shadow: 0 0 0 2px rgba(185, 139, 80, 0.18);
+}
+.gallery-thumb {
+  position: relative;
+  height: 135px;
+  background: #e8ded1;
+}
+.admin-gallery .gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.admin-gallery .gallery-remove {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  border: 0;
+  background: rgba(40, 30, 24, 0.88);
+  color: white;
+}
+.cover-badge,
+.new-badge {
+  position: absolute;
+  left: 7px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 7px;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.cover-badge {
+  bottom: 7px;
+  background: #a87338;
+}
+.new-badge {
+  top: 7px;
+  background: #4f6f4d;
+}
+.admin-gallery .cover-action {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  min-height: 38px;
+  height: auto;
+  border: 0;
+  border-top: 1px solid #ece3d8;
+  background: #fff;
+  color: #70573c;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.admin-gallery .cover-action:disabled {
+  color: #9d6f3e;
+  cursor: default;
+}
+
+/* Modal de producto */
+.modal-open {
+  overflow: hidden;
+}
+.product-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(22, 16, 11, 0.74);
+  backdrop-filter: blur(5px);
+}
+.product-modal {
+  display: flex;
+  flex-direction: column;
+  width: min(1020px, 100%);
+  max-height: calc(100vh - 48px);
+  overflow: hidden;
+  background: #f8f4ed;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+}
+.product-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 28px;
+  border-bottom: 1px solid #ddd1c2;
+  background: #231b15;
+  color: #f6ebdc;
+}
+.product-modal-header h2 {
+  margin: 5px 0 0;
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 500;
+}
+.product-modal-header button {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: white;
+}
+.product-form {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+}
+.product-modal-content {
+  min-height: 0;
+  padding: 28px;
+  overflow-y: auto;
+}
+.modal-error {
+  margin: 0 0 20px;
+}
+.image-manager {
+  margin-top: 30px;
+  padding-top: 26px;
+  border-top: 1px solid #d9ccbc;
+}
+.image-manager-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+}
+.image-manager h3 {
+  margin: 7px 0 0;
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 500;
+}
+.image-manager > p {
+  margin: 10px 0 18px;
+  color: #74695e;
+  font-size: 11px;
+}
+.image-counter {
+  padding: 6px 9px;
+  background: #e9dece;
+  color: #785c3d;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.image-dropzone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7px;
+  min-height: 145px;
+  padding: 20px;
+  border: 1px dashed #bba98f;
+  background: #fdfbf8;
+  color: #876b4b;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+.image-dropzone.dragging,
+.image-dropzone:hover {
+  border-color: #a6763f;
+  background: #f1e6d7;
+}
+.image-dropzone strong {
+  font-size: 12px;
+}
+.image-dropzone span {
+  color: #8b8175;
+  font-size: 9px;
+}
+.image-dropzone input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.product-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 28px;
+  border-top: 1px solid #d9ccbc;
+  background: #f8f4ed;
+}
+.button-secondary {
+  border: 1px solid #cdbfac;
+  background: transparent;
+  color: #64513d;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-modal {
+    max-height: calc(100vh - 20px);
+  }
+  .product-modal-backdrop {
+    padding: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .product-modal-backdrop {
+    padding: 0;
+  }
+  .product-modal {
+    width: 100%;
+    max-height: 100vh;
+    min-height: 100vh;
+  }
+  .product-modal-header,
+  .product-modal-content,
+  .product-modal-actions {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .product-modal-header h2 {
+    font-size: 24px;
+  }
+  .admin-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+  .gallery-thumb {
+    height: 115px;
+  }
+  .product-modal-actions .button {
+    flex: 1;
+    justify-content: center;
+  }
+}

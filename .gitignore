@@ -8,4 +8,5 @@ client/dist/
 server/.env
 server/generated/
 .private/
+.private
 *.log

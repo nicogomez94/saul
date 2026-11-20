@@ -57,6 +57,13 @@ function ProductDialog({ product, onClose, onAdd }) {
     if (!product) return;
     setPhoto(0);
     ref.current?.showModal();
+    const preloaders = (product.images || []).map((image) => {
+      const preloader = new Image();
+      preloader.decoding = "async";
+      preloader.src = image.src;
+      return preloader;
+    });
+    return () => preloaders.forEach((preloader) => (preloader.src = ""));
   }, [product]);
   if (!product) return null;
   const photos = product.images || [];
@@ -77,34 +84,61 @@ function ProductDialog({ product, onClose, onAdd }) {
         <X size={18} />
       </button>
       <div className="dialog-layout">
-        <div className="dialog-photo">
-          {photos.length ? (
-            <img src={photos[photo]?.src} alt={productTitle(product)} />
-          ) : (
-            <div className="product-placeholder">
-              <Guitar size={46} />
-              <span>Fotografía pendiente</span>
-            </div>
-          )}
+        <div className="dialog-media">
+          <div className="dialog-photo">
+            {photos.length ? (
+              <img
+                src={photos[photo]?.src}
+                alt={`${productTitle(product)}, foto ${photo + 1}`}
+                decoding="async"
+                fetchPriority="high"
+              />
+            ) : (
+              <div className="product-placeholder">
+                <Guitar size={46} />
+                <span>Fotografía pendiente</span>
+              </div>
+            )}
+            {photos.length > 1 && (
+              <div className="photo-controls">
+                <button
+                  onClick={() =>
+                    setPhoto((photo - 1 + photos.length) % photos.length)
+                  }
+                  aria-label="Foto anterior"
+                >
+                  <ChevronLeft size={17} />
+                </button>
+                <span>
+                  {photo + 1} / {photos.length}
+                </span>
+                <button
+                  onClick={() => setPhoto((photo + 1) % photos.length)}
+                  aria-label="Foto siguiente"
+                >
+                  <ChevronRight size={17} />
+                </button>
+              </div>
+            )}
+          </div>
           {photos.length > 1 && (
-            <div className="photo-controls">
-              <button
-                onClick={() =>
-                  setPhoto((photo - 1 + photos.length) % photos.length)
-                }
-                aria-label="Foto anterior"
-              >
-                <ChevronLeft size={17} />
-              </button>
-              <span>
-                {photo + 1} / {photos.length}
-              </span>
-              <button
-                onClick={() => setPhoto((photo + 1) % photos.length)}
-                aria-label="Foto siguiente"
-              >
-                <ChevronRight size={17} />
-              </button>
+            <div className="dialog-thumbnails" aria-label="Galería de fotos">
+              {photos.map((image, index) => (
+                <button
+                  key={image.id || image.src}
+                  className={photo === index ? "active" : ""}
+                  onClick={() => setPhoto(index)}
+                  aria-label={`Ver foto ${index + 1} de ${productTitle(product)}`}
+                  aria-pressed={photo === index}
+                >
+                  <img
+                    src={image.src}
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                  />
+                </button>
+              ))}
             </div>
           )}
         </div>
@@ -483,9 +517,6 @@ export default function App() {
                         </div>
                       )}
                       <span className="product-tag">{product.stockId}</span>
-                      <span className="quick-view">
-                        <ArrowUpRight size={15} />
-                      </span>
                     </button>
                     <div className="product-info">
                       <div className="product-overline">

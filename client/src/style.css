@@ -589,26 +589,6 @@ button {
   font-weight: 700;
   letter-spacing: 0.1em;
 }
-.quick-view {
-  position: absolute;
-  right: 13px;
-  bottom: 13px;
-  display: grid;
-  place-items: center;
-  width: 38px;
-  height: 38px;
-  background: var(--paper);
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
-}
-.quick-view:hover {
-  background: var(--gold-light);
-  transform: translateY(-3px);
-}
-.quick-view i {
-  font-size: 12px;
-}
 .detail-link {
   display: inline-flex;
   align-items: center;
@@ -1006,6 +986,7 @@ button {
 .product-dialog {
   width: min(900px, calc(100vw - 32px));
   max-height: min(760px, calc(100vh - 32px));
+  overflow: auto;
   padding: 0;
   border: 1px solid #8e6a46;
   background: #291d17;
@@ -1032,10 +1013,17 @@ button {
 .dialog-layout {
   display: grid;
   grid-template-columns: 48% 52%;
-  min-height: 490px;
+  min-height: 560px;
+}
+.dialog-media {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  background: #17110d;
 }
 .dialog-photo {
-  min-height: 490px;
+  min-height: 0;
+  flex: 1;
   background: #e8e0d5;
 }
 .dialog-photo > img {
@@ -1460,9 +1448,6 @@ button {
   text-align: left;
   cursor: pointer;
 }
-.product-image .quick-view {
-  color: var(--ink);
-}
 .product-bottom button {
   display: inline-flex;
   align-items: center;
@@ -1696,6 +1681,52 @@ button.contact-card {
   background: transparent;
   color: inherit;
 }
+.dialog-thumbnails {
+  display: grid;
+  grid-auto-columns: 70px;
+  grid-auto-flow: column;
+  gap: 8px;
+  min-height: 86px;
+  padding: 10px;
+  overflow-x: auto;
+  background: #17110d;
+  scrollbar-color: #9f7344 transparent;
+  scrollbar-width: thin;
+}
+.dialog-thumbnails button {
+  position: relative;
+  width: 70px;
+  height: 66px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #2b211a;
+  opacity: 0.58;
+  transition:
+    border-color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+.dialog-thumbnails button:hover,
+.dialog-thumbnails button.active {
+  border-color: var(--gold-light);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+.dialog-thumbnails button.active::after {
+  content: "";
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  height: 2px;
+  background: var(--gold-light);
+}
+.dialog-thumbnails img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .dialog-copy {
   justify-content: flex-start;
   overflow-y: auto;
@@ -1709,11 +1740,26 @@ button.contact-card {
   margin-top: 24px;
 }
 @media (max-width: 768px) {
+  .dialog-media {
+    min-height: 386px;
+  }
   .dialog-copy {
     max-height: none;
   }
 }
 @media (max-width: 480px) {
+  .dialog-media {
+    min-height: 322px;
+  }
+  .dialog-thumbnails {
+    grid-auto-columns: 58px;
+    min-height: 72px;
+    padding: 8px;
+  }
+  .dialog-thumbnails button {
+    width: 58px;
+    height: 54px;
+  }
   .cart-drawer {
     padding: 28px 20px;
   }
